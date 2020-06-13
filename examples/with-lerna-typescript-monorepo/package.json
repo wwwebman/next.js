@@ -1,0 +1,26 @@
+{
+  "name": "@project/workspace",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "lerna run dev",
+    "build": "lerna run --parallel build",
+    "app:build": "lerna run --scope={@project/utils,@project/app} build",
+    "app:start": "lerna run --scope @project/app start"
+  },
+  "devDependencies": {
+    "@babel/core": "7.10.2",
+    "babel-jest": "26.0.1",
+    "babel-plugin-module-resolver": "4.0.0",
+    "lerna": "3.22.1",
+    "tsconfig-paths": "3.9.0",
+    "typescript": "3.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@farpoint.get-ag.com:7999/pl/pvg-react.git"
+  },
+  "license": "ISC"
+}
